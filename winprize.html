@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nobel Prize Winners</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        main {
+            background-color: #f8f8f8;
+            padding: 20px;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        select {
+            margin-bottom: 10px;
+            padding: 8px;
+            font-size: 16px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        strong {
+            margin-right: 5px;
+        }
+
+        #multiTimeWinners, #prizeList {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        #multiTimeWinners li, #prizeList li {
+            width: calc(33.33% - 20px);
+        }
+
+        .parallax {
+            background-position: center;
+            background-size: cover;
+            height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            font-size: 24px;
+        }
+
+        .parallax1 {
+            background-color: #3498db; /* Blue */
+        }
+
+        .parallax2 {
+            background-color: #e74c3c; /* Red */
+        }
+
+        .parallax3 {
+            background-color: #8e44ad; /* Purple */
+        }
+
+        .parallax4 {
+            background-color: #000; /* Black */
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nobel Prize Winners</h1>
+    </header>
+
+    <main>
+        <section class="parallax parallax1">
+            <h2>Multi-Time Winners</h2>
+            <ul id="multiTimeWinners"></ul>
+        </section>
+
+        <section>
+            <h2>All Prize Winners</h2>
+            <label for="year">Select Year:</label>
+            <select id="year"></select>
+
+            <label for="category">Select Category:</label>
+            <select id="category"></select>
+
+            <ul id="prizeList"></ul>
+        </section>
+
+        <section class="parallax parallax2">
+            <h2>More Content</h2>
+        </section>
+
+        <section class="parallax parallax3">
+            <h2>Even More Content</h2>
+        </section>
+
+        <section class="parallax parallax4">
+            <h2>The Darkest Content</h2>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2023 Nobel Prize Winners
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            fetchPrizes();
+        });
+
+        function fetchPrizes() {
+            // Your existing JavaScript code for fetching and displaying data
+        }
+    </script>
+</body>
+</html>
